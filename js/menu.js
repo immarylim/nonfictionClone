@@ -36,6 +36,18 @@ function mobileMenuInactive() {
     headerBox.css("z-index", "999");
 }
 
+/* hover css */
+function mouseOverLeave() {
+    $(".menu-shop > ul").on({
+        mouseover: () => {
+            menuShop.addClass(HOVERED_KEY);
+        },
+        mouseleave: () => {
+            menuShop.removeClass(HOVERED_KEY);
+        }
+    });
+}
+
 /* drop down */
 $(".shop-name").click(() => {
     if(toggleNum1) {
@@ -57,16 +69,6 @@ $(".about-name").click(() => {
     toggleNum2 = !toggleNum2;
 });
 
-/* hover css */
-$(".menu-shop > ul").on({
-    mouseover: () => {
-        menuShop.addClass(HOVERED_KEY);
-    },
-    mouseleave: () => {
-        menuShop.removeClass(HOVERED_KEY);
-    }
-});
-
 /* mobile menu */
 $("label[for='mobile-menu']").click(() => {
     $(".menu-box").off("mouseover mouseleave");
@@ -86,12 +88,17 @@ $(window).resize(() => {
     if(window.innerWidth > 780) {
         mobileMenuInactive();
 
+        mouseOverLeave();
+
         shopBurger.addClass(HIDDEN_KEY);
     } else if(window.innerWidth <= 780 && !mobileMenu) {
         mobileMenuActive();
+        
+        $(".menu-box").off("mouseover mouseleave");
 
         shopBurger.removeClass(HIDDEN_KEY);
     }
 }).resize();
 
 windowScroll();
+mouseOver();
