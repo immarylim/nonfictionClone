@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+.hidden {
+  display: none;
+}
+
+.hovered {
+  width: 300px;
+  height: 100vh;
+  backdrop-filter: blur(50px);
+  box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.2196078431);
+}
+
+.mobile-menu-active {
+  width: 100%;
+  position: absolute !important;
+  top: 0;
+  background: black;
+}
+
+/* 1:1 talk */
+.etc1 {
+  position: fixed;
+  bottom: 40px;
+  right: 50px;
+  display: inline-block;
+  z-index: 9999;
+}
+.etc1 p {
+  padding: 20px;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 50%;
+  background: #f0f0f0;
+  cursor: pointer;
+  transition: all 250ms linear;
+}
+.etc1 p:hover {
+  box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.168627451);
+}
+
+/* header */
+.header {
+  width: 100%;
+  position: fixed;
+  font-family: "Lora", serif;
+  font-size: 19px;
+  z-index: 999;
+}
+
+.header-new {
+  font-family: "Gothic A1", sans-serif;
+}
+.header-new p {
+  height: 30px;
+  text-align: center;
+  line-height: 29px;
+  background: black;
+}
+.header-new p a {
+  font-size: 13px;
+  color: white;
+}
+.header-new p a:hover {
+  text-decoration: underline;
+}
+
+.header-top {
+  position: relative;
+}
+
+.menu-my ul li a, .menu-shop ul li, .menu-shop ul li a {
+  color: white;
+}
+
+.menu-my ul li > a, .menu-shop ul li a, .shop-search p {
+  display: inline-block;
+}
+.menu-my ul li > a::after, .menu-shop ul li a::after, .shop-search p::after {
+  content: "";
+  display: block;
+  border-bottom: solid 1px white;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.menu-my ul li > a:hover::after, .menu-shop ul li a:hover::after, .shop-search p:hover::after {
+  transform: scaleX(1);
+}
+
+#mobile-menu, #mobile-menu + label {
+  display: none;
+}
+
+.menu-shop li:not(li:last-child) {
+  padding-bottom: 5px;
+}
+
+.menu-box {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+
+.shop-sub, .about-sub {
+  display: none;
+  padding: 5px 0 20px 10px;
+}
+
+.shop-search {
+  margin-top: 50px;
+}
+.shop-search p {
+  cursor: pointer;
+}
+
+.search-box {
+  margin-top: 5px;
+  display: none;
+}
+.search-box input {
+  font-family: "Gothic A1", sans-serif;
+  max-width: 180px;
+  padding: 1px 5px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid white;
+  background: none;
+}
+.search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.676);
+}
+.search-box input:focus {
+  outline: none;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logo a img {
+  width: 135px;
+  margin: 0 auto;
+}
+
+.menu-my {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+}
+.menu-my > ul {
+  display: flex;
+}
+.menu-my > ul li a {
+  margin-left: 40px;
+}
+.menu-my > ul li:nth-child(1) {
+  position: relative;
+}
+
+.lan {
+  min-width: 47px;
+  padding-bottom: 2px;
+  display: inline-block;
+}
+.lan::before {
+  content: "";
+  background-image: url("../img/icon/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 7px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 8px;
+  right: 4px;
+  transform: rotate(90deg);
+}
+
+.another-lan {
+  display: none;
+}
+.another-lan a {
+  padding: 2px 0;
+}
+
+/* footer */
+.footer {
+  padding: 50px;
+  overflow: hidden;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-con {
+  margin-bottom: 45px;
+  flex: 1 1;
+}
+.box-con > p {
+  margin-bottom: 15px;
+  font-family: "Lora", serif;
+  font-size: 16px;
+}
+.box-con:nth-child(n+2) {
+  max-width: 210px;
+  padding: 0 15px;
+}
+.box-con:nth-child(n+2) li {
+  margin-right: 50px;
+  margin-bottom: 6px;
+}
+.box-con:last-child ul {
+  font-family: "Lora", serif;
+}
+
+.box-con a {
+  color: #5d5d5d;
+}
+.box-con a:hover {
+  color: black;
+}
+
+.service-con {
+  margin-bottom: 20px;
+}
+.service-con img {
+  width: 9px;
+  position: relative;
+  margin-right: 10px;
+  display: inline-block;
+}
+.service-con > p:nth-child(1) {
+  font-size: 28px;
+}
+.service-con > p:nth-child(1) img {
+  top: -4px;
+}
+.service-con > p:nth-child(-n+2) {
+  font-family: "Lora", serif;
+}
+.service-con > p:nth-child(2) {
+  margin-bottom: 5px;
+}
+.service-con > p:nth-child(n+2) {
+  font-size: 13px;
+  color: #bdbdbd;
+}
+
+.service-sub {
+  font-size: 10.5px;
+}
+
+/* media query 780 */
+@media only screen and (max-width: 780px) {
+  /* 1:1 talk */
+  .etc1 {
+    right: 15px;
+  }
+  /* header */
+  .header-top {
+    height: 100px;
+  }
+  .menu-shop {
+    width: 27px;
+    height: 18px;
+    position: relative;
+    top: 23px;
+    left: 15px;
+  }
+  #mobile-menu + label {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+  }
+  #mobile-menu + label > span {
+    width: 100%;
+    height: 1.5px;
+    position: absolute;
+    display: block;
+    border-radius: 5px;
+    background: white;
+    transition: all 300ms ease;
+  }
+  #mobile-menu + label > span:nth-child(1) {
+    top: 0;
+  }
+  #mobile-menu + label > span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #mobile-menu + label > span:nth-child(3) {
+    bottom: 0;
+  }
+  #mobile-menu:checked + label > span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  #mobile-menu:checked + label > span:nth-child(2) {
+    opacity: 0;
+  }
+  #mobile-menu:checked + label > span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  #mobile-menu:checked + label + .menu-box {
+    left: 0;
+  }
+  .menu-box {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 100px;
+    left: -100%;
+    padding: 30px 15px;
+    background: black;
+    transition: all 0.5s ease;
+  }
+  .shop-search {
+    margin: 50px 0;
+  }
+  .search-box input {
+    color: white;
+  }
+  .logo a img {
+    width: 100px;
+  }
+  .menu-my {
+    right: 15px;
+  }
+  .menu-my > ul > li:nth-child(n+2) {
+    display: none;
+  }
+  /* footer */
+  .footer {
+    padding: 50px 30px;
+  }
+  .footer-box {
+    flex-direction: column;
+  }
+  .box-con:nth-child(n+2) {
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

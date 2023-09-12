@@ -1,0 +1,32 @@
+/* content */
+.main-sec {
+  position: relative;
+}
+.main-sec a img {
+  width: 100%;
+}
+.main-sec a img:nth-child(2) {
+  display: none;
+}
+
+.sec-con {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* media query 780 */
+@media only screen and (max-width: 780px) {
+  .main-sec a img:nth-child(1) {
+    display: none;
+  }
+  .main-sec a img:nth-child(2) {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

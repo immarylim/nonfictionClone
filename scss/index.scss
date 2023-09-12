@@ -1,0 +1,37 @@
+$font-medi: 16px;
+
+/* content */
+.main-sec {
+    position: relative;
+
+    a img {
+        width: 100%;
+
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+.sec-con {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    color: white;
+    font-size: $font-medi;
+    font-weight: 600;
+}
+
+/* media query 780 */
+@media only screen and (max-width: 780px) {
+    .main-sec a img {
+        &:nth-child(1) {
+            display: none;
+        }
+
+        &:nth-child(2) {
+            display: block;
+        }
+    }
+}
