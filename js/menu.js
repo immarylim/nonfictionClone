@@ -5,6 +5,7 @@ const shopSub = $(".shop-sub");
 const aboutSub = $(".about-sub");
 const menuShop = $(".menu-shop");
 const shopBurger = $(".shop-burger");
+const mobileBlock = $(".mobile-block");
 
 let toggleNum1 = true;
 let toggleNum2 = true;
@@ -28,11 +29,15 @@ function windowScroll() {
 /* mobile menu active function */
 function mobileMenuActive() {
     headerTop.addClass(MENUACTIVE_KEY);
+    mobileBlock.removeClass(HIDDEN_KEY);
+
     headerBox.css("z-index", "99991");
 }
 
 function mobileMenuInactive() {
     headerTop.removeClass(MENUACTIVE_KEY);
+    mobileBlock.addClass(HIDDEN_KEY);
+
     headerBox.css("z-index", "999");
 }
 
@@ -91,12 +96,14 @@ $(window).resize(() => {
         mouseOverLeave();
 
         shopBurger.addClass(HIDDEN_KEY);
+        mobileBlock.addClass(HIDDEN_KEY);
     } else if(window.innerWidth <= 780 && !mobileMenu) {
         mobileMenuActive();
         
         $(".menu-box").off("mouseover mouseleave");
 
         shopBurger.removeClass(HIDDEN_KEY);
+        mobileBlock.removeClass(HIDDEN_KEY);
     }
 }).resize();
 
