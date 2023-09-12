@@ -101,4 +101,4 @@ $(window).resize(() => {
 }).resize();
 
 windowScroll();
-mouseOver();
+mouseOverLeave();
